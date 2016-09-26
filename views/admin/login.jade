@@ -1,19 +1,18 @@
 extends ../layout
 
 block content
-  body.pushable
-    .pusher
-      .ui.middle.aligned.center.grid
-        .column
-          form.ui.large.form
-            .ui.stacked.segment
-              .field
-                .ui.left.icon.input
-                  i.user.icon
-                  input(type="text", name="email", placeholder="E-mail address")
-              .field
-                .ui.left.icon.input
-                  i.lock.icon
-                  input(type="password", name="password", placeholder="Password")
-              .ui.fluid.large.teal.submit.button Login
-            .ui.error.message
+  body
+    .ui.middle.aligned.center.aligned.grid
+      .column
+        form.ui.large.form
+          .ui.stacked.segment
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input(type="text", name="email", placeholder="E-mail address")
+            .field
+              .ui.left.icon.input
+                i.lock.icon
+                input(type="password", name="password", placeholder="Password")
+            .ui.fluid.large.teal.submit.button Login
+          .ui.error.message

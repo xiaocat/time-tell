@@ -1,3 +1,11 @@
+body {
+  background-color: #DADADA; }
+  body > .grid {
+    height: 100%; }
+
+.column {
+  max-width: 450px; }
+
 .masthead .ui.menu .ui.button {
   margin-left: 0.5em; }
 
