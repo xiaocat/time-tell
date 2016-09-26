@@ -1,8 +1,5 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em; }
 
-a {
-  color: #00B7FF; }
-
-/*# sourceMappingURL=style.css.map */
+.secondary.pointing.menu .toc.item {
+  display: none; }
