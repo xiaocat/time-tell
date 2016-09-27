@@ -11,6 +11,7 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/login', function(req, res, next) {
+  console.log(req.body);
   res.render('admin/login');
 });
 

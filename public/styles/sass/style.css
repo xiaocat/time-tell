@@ -1,0 +1,18 @@
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+body {
+  background-color: #DADADA;
+}
+body > .grid {
+  height: 100%;
+}
+
+.column {
+  max-width: 450px;
+}
