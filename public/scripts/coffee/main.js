@@ -19,7 +19,9 @@ require(['controls/config'], function(config) {
     },
     urlArgs: 'v=0.1'
   });
-  return require(['controls/' + document.body.id], function(page) {
-    return page.init();
-  });
+  if (document.body.id) {
+    return require(['controls/' + document.body.id], function(page) {
+      return page.init();
+    });
+  }
 });

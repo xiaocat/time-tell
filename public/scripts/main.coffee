@@ -16,5 +16,6 @@ require ['controls/config'], (config)->
         deps: ['zepto']
     urlArgs: 'v=0.1'
 
-  require ['controls/' + document.body.id ], (page)->
-    page.init()
+  if document.body.id
+    require ['controls/' + document.body.id ], (page)->
+      page.init()
