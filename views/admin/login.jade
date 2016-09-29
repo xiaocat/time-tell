@@ -1,10 +1,10 @@
 extends ../layout
 
 block content
-  body(id="admin/login")
+  body
     .ui.middle.aligned.center.aligned.grid
       .column
-        form.ui.large.form
+        form.ui.large.form(method="post")
           .ui.stacked.segment
             .field
               .ui.left.icon.input
@@ -14,5 +14,5 @@ block content
               .ui.left.icon.input
                 i.lock.icon
                 input(type="password", name="password", placeholder="Password")
-            .ui.fluid.large.teal.submit.button.js_login_submit Login
+            input.ui.fluid.large.teal.submit.button.js_login_submit(type="submit", value="登录")
           .ui.error.message

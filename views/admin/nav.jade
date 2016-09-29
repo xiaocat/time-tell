@@ -3,8 +3,14 @@
     .ui.menu.large.secondary.inverted.pointing
       a.item.toc
         i.sidebar.icon
-      a.item.active 主页
-      a.item 博客
+      - if(active && active == 'home')
+        a.item.active(href="/admin") 主页
+      - else
+        a.item(href="/admin") 主页
+      - if(active && active == 'blog')
+        a.item.active(href="/blog") 博客
+      - else
+        a.item(href="/blog/add") 博客
       a.item 关于
       .item.right
         a.ui.button.inverted(href="/admin/login") 登录

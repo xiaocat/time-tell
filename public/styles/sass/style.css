@@ -16,3 +16,7 @@ body > .grid {
 .column {
   max-width: 450px;
 }
+
+.blogAdd .blogAdd__container {
+  padding: 30px;
+}

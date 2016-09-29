@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  body.blogAdd(id="blog/add")
+    include ../admin/nav
+    .blogAdd__container
+      form.ui.form.segment
+        h3.ui.dividing.header 创建博客
+        .field
+          label 标题
+          .filed
+            input(type="text", name="title", placeholder="请输入标题")
+        .field
+          label 标签
+          .filed
+            input(type="text", name="tags", placeholder="请输入标签")
+        .field
+          label 内容
+          textarea(name="contents", placeholder="")
+        .ui.button.teal.js_blog_submit(tabindex='0') 创建
