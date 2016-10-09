@@ -1,4 +1,5 @@
 var mongodb = require('./db');
+var objectId = mongodb.mongoDb.ObjectId;
 
 function Note(note) {
   this.name = note.name;
@@ -47,4 +48,46 @@ Note.prototype.save = function(callback){
     });
   });
 
+};
+
+Note.findOne = function(id, callback){
+  mongodb.operate('notes', function(err, collection, mongodb){
+    if(err){
+      return callback(err);
+    }
+    collection.findOne({
+      _id: objectId(id)
+    },function (err, doc) {
+      if (err) {
+        mongodb.close();
+        return callback(err);
+      }
+      if (doc) {
+        callback(null, doc);
+      }
+      mongodb.close();
+    });
+  });
+};
+
+Note.list = function(callback){
+  mongodb.operate('notes', function(err, collection, mongodb){
+    if(err){
+      return callback(err);
+    }
+    collection.find({}, {
+      "time": 1,
+      "title": 1,
+      "contents": 1,
+      "tags": 1
+    }).sort({
+      time: -1
+    }).toArray(function(err, docs){
+      mongodb.close();
+      if (err) {
+        return callback(err);
+      }
+      callback(null, docs);
+    });
+  });
 };

@@ -6,6 +6,10 @@
   display: none;
 }
 
+.hide {
+  display: none !important;
+}
+
 body {
   background-color: #DADADA;
 }
@@ -19,4 +23,23 @@ body > .grid {
 
 .blogAdd .blogAdd__container {
   padding: 30px;
+}
+
+pre {
+  margin: 1em 0;
+  font-size: 12px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 5px;
+  line-height: 1.5em;
+  color: #444;
+  overflow: auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
+  border-radius: 3px;
+}
+pre code {
+  padding: 0 !important;
+  font-size: 12px !important;
+  background-color: #eee !important;
+  border: none !important;
 }

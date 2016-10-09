@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  body
+    include ../admin/nav
+    .ui.segment.container
+      - if(note)
+        .ui.tall.stacked.segment.card.fluid
+          .content
+            h4.ui.header.dividing.teal
+              i.icon.cube 
+              | #{note.title}
+          .content
+            | !{note.contents}
+          .extra.content
+            .meta
+              i.icon.wait
+              | #{note.time.minute}
+              .right.floated.author
+                i.icon.user
+                | #{note.tags}

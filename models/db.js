@@ -24,5 +24,6 @@ function mongoOperate(collectionName, callback){
 
 module.exports = {
   db: mongodb,
-  operate: mongoOperate
+  operate: mongoOperate,
+  mongoDb: mongoDb
 }

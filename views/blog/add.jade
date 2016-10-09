@@ -1,10 +1,10 @@
 extends ../layout
 
 block content
-  body.blogAdd(id="blog/add")
+  body.blogAdd
     include ../admin/nav
-    .blogAdd__container
-      form.ui.form.segment
+    .blogAdd__container.ui.segment.container
+      form.ui.form(method="post")
         h3.ui.dividing.header 创建博客
         .field
           label 标题
@@ -17,4 +17,4 @@ block content
         .field
           label 内容
           textarea(name="contents", placeholder="")
-        .ui.button.teal.js_blog_submit(tabindex='0') 创建
+        button.ui.button.teal.js_blog_submit(type="submit") 创建

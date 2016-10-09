@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  body
+    include ../admin/nav
+    .ui.segment.container
+      .ui.header.dividing
+        | 博客
+        .ui.label.left.pointing.black #{list && list.length || 0}
+        a.ui.label.right.floated.green(href="/blog/add", style="float:right;") 新建
+      -if(list && list.length > 0)
+        - each blog, index in list
+          .ui.tall.stacked.segment.card.fluid
+            .content
+              a(href="/blog/#{blog._id}")
+                h4.ui.header.dividing.teal
+                  i.icon.cube 
+                  | #{blog.title}
+            .content.hide
+              | !{blog.contents}
+            .extra.content
+              .meta
+                i.icon.wait
+                | #{blog.time.minute}
+                .right.floated.author
+                  i.icon.user
+                  | #{blog.tags}
